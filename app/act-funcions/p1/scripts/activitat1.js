@@ -21,5 +21,5 @@ window.onload = function preguntar() {
   resultado.sort((a, b) => b.localeCompare(a, "es"));
 
   //Muestra por consola el contenido de 'resultado'
-  console.log(resultado);
+  document.write(`<p>${resultado}</p><br />`);
 };
