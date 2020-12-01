@@ -13,6 +13,14 @@ capa2.addEventListener('dragenter', () => {
 
 //Cuando capa1 se suelta sobre capa2, capa1 desaparece y capa2 cambia su color de fondo y su texto
 capa2.addEventListener('dragleave', () => {
+  capa2.style.opacity = '100%';
+});
+
+capa2.addEventListener('dragover', function (event) {
+  event.preventDefault();
+});
+
+capa2.addEventListener('drop', () => {
   capa1.style.display = 'none';
   capa2.style.backgroundColor = 'yellow';
   capa2.innerHTML = 'Lo has logrado!';
