@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Act Promesas 2</title>
+</head>
+<body>
+    
+    <script type="module">
+
+        import * as temp from "./scripts/activitat2.js" 
+        
+        let parrafo1 = document.createElement('p');
+        let parrafo2 = document.createElement('p');
+
+        let agrupar = document.getElementById('agrupar');
+
+        agrupar.appendChild(parrafo1);
+        agrupar.appendChild(parrafo2);
+
+        temp.cuenta(6, parrafo1);
+
+        temp.cuenta(60, parrafo2, 100, () => {
+            parrafo2.textContent = 'Fin';
+        });
+    </script>
+
+   <div id="agrupar">
+
+    <p id="error"></p>
+   </div>
+</body>
+</html>
