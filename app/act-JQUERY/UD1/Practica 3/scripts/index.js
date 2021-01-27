@@ -22,4 +22,12 @@ $(() => {
 
   //Selecciona las obras que contengan la palabra Henry y se le aplica el estilo highlight
   $('table tr > td:contains("Henry")').addClass('highlight');
+
+  //Aplica el estilo highlight a la celda siguiente de la celda que contenga Henry como texto
+  $('table tr > td:contains("Henry")').next().addClass('highlight');
+
+  //Aplica el estilo highlight en la primera tabla a todas las celdas siguientes a la celda que contenga el texto "et"
+  $('table:nth-of-type(1) tr > td:contains("et")')
+    .nextAll()
+    .addClass('highlight');
 });
